@@ -26,21 +26,21 @@ print ("""
 |_______|_____________________|________|________________|_______|
 """)
 class Node:
-    def __init__(self, data):
+    def __init__(self, data):      # define node
         self.data = data
         self.children = []
 
-    def add_child(self, child_node):
+    def add_child(self, child_node):       #define child
         self.children.append(child_node)
 
     def __repr__(self):
         return f"Node({self.data})"
 
 class Tree:
-    def __init__(self, root=None):
+    def __init__(self, root=None):     #define the tree
         self.root = root
 
-    def print_tree(self, node=None, level=0):
+    def print_tree(self, node=None, level=0):   # fucntion for printing tree
       if node is None:
         node = self.root
 
@@ -49,7 +49,7 @@ class Tree:
         self.print_tree(child, level + 1)
 
 
-# Create nodes
+          # Create nodes
 node00 = Node("0,0")
 node01 = Node("0,1")
 node02 = Node("0,2")
@@ -114,8 +114,7 @@ node74 = Node("7,4")
 node75 = Node("7,5")
 node76 = Node("7,6")
 node77 = Node("7,7")
-# Build tree structure
-node00.add_child(node01)
+node00.add_child(node01)    # add the childre of each node
 node01.add_child(node02)
 node02.add_child(node03)
 node03.add_child(node04)
@@ -167,8 +166,7 @@ node67.add_child(node77)
 node77.add_child(node76)
 node76.add_child(node66)
 node66.add_child(node65)
-# Create the tree
-tree = Tree(node00)
+tree = Tree(node00)    # define tree
 
-# Print the tree
-tree.print_tree()
+
+tree.print_tree()   # print tree
